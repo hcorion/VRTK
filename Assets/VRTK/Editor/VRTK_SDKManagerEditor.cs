@@ -35,6 +35,8 @@
             EditorGUILayout.PropertyField(serializedObject.FindProperty("actualHeadset"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("actualLeftController"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("actualRightController"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("modelAliasLeftController"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("modelAliasRightController"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("scriptAliasLeftController"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("scriptAliasRightController"));
 

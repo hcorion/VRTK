@@ -26,8 +26,8 @@
             events.TriggerPressed += new ControllerInteractionEventHandler(DoTriggerPressed);
             events.TriggerReleased += new ControllerInteractionEventHandler(DoTriggerReleased);
 
-            events.ApplicationMenuPressed += new ControllerInteractionEventHandler(DoApplicationMenuPressed);
-            events.ApplicationMenuReleased += new ControllerInteractionEventHandler(DoApplicationMenuReleased);
+            events.ButtonOnePressed += new ControllerInteractionEventHandler(DoButtonOnePressed);
+            events.ButtonOneReleased += new ControllerInteractionEventHandler(DoButtonOneReleased);
 
             events.GripPressed += new ControllerInteractionEventHandler(DoGripPressed);
             events.GripReleased += new ControllerInteractionEventHandler(DoGripReleased);
@@ -55,17 +55,17 @@
             }
         }
 
-        private void DoApplicationMenuPressed(object sender, ControllerInteractionEventArgs e)
+        private void DoButtonOnePressed(object sender, ControllerInteractionEventArgs e)
         {
-            tooltips.ToggleTips(true, VRTK_ControllerTooltips.TooltipButtons.AppMenuTooltip);
-            actions.ToggleHighlightApplicationMenu(true, Color.yellow, 0.5f);
+            tooltips.ToggleTips(true, VRTK_ControllerTooltips.TooltipButtons.ButtonOneTooltip);
+            actions.ToggleHighlightButtonOne(true, Color.yellow, 0.5f);
             actions.SetControllerOpacity(0.8f);
         }
 
-        private void DoApplicationMenuReleased(object sender, ControllerInteractionEventArgs e)
+        private void DoButtonOneReleased(object sender, ControllerInteractionEventArgs e)
         {
-            tooltips.ToggleTips(false, VRTK_ControllerTooltips.TooltipButtons.AppMenuTooltip);
-            actions.ToggleHighlightApplicationMenu(false);
+            tooltips.ToggleTips(false, VRTK_ControllerTooltips.TooltipButtons.ButtonOneTooltip);
+            actions.ToggleHighlightButtonOne(false);
             if (!events.AnyButtonPressed())
             {
                 actions.SetControllerOpacity(1f);
